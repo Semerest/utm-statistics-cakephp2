@@ -1,50 +1,46 @@
 <h1>UTM Statistics</h1>
+
 <?php if (empty($tree)): ?>
     <p>No UTM data found.</p>
 <?php endif; ?>
+
 <?php foreach ($tree as $source => $mediums): ?>
 
-    <div style="margin-bottom: 20px;">
+    <div class="utm-source">
 
-        <h2><?php echo h($source); ?></h2>
+        <div class="utm-source-title">
+            <?php echo h($source); ?>
+        </div>
 
         <?php foreach ($mediums as $medium => $campaigns): ?>
 
-            <div style="margin-left: 20px; margin-bottom: 10px;">
-
+            <div class="utm-level utm-medium">
                 <strong><?php echo h($medium); ?></strong>
+            </div>
 
-                <?php foreach ($campaigns as $campaign => $contents): ?>
+            <?php foreach ($campaigns as $campaign => $contents): ?>
 
-                    <div style="margin-left: 20px; margin-top: 5px;">
+                <div class="utm-level utm-campaign">
+                    <?php echo h($campaign); ?>
+                </div>
 
-                        <?php echo h($campaign); ?>
+                <?php foreach ($contents as $content => $terms): ?>
 
-                        <?php foreach ($contents as $content => $terms): ?>
-
-                            <div style="margin-left: 20px;">
-
-                                Content:
-                                <?php echo h($content); ?>
-
-                                <?php foreach ($terms as $term): ?>
-
-                                    <div style="margin-left: 20px;">
-                                        Term:
-                                        <?php echo h($term); ?>
-                                    </div>
-
-                                <?php endforeach; ?>
-
-                            </div>
-
-                        <?php endforeach; ?>
-
+                    <div class="utm-level utm-content">
+                        Content: <?php echo h($content); ?>
                     </div>
+
+                    <?php foreach ($terms as $term): ?>
+
+                        <div class="utm-level utm-term">
+                            Term: <?php echo h($term); ?>
+                        </div>
+
+                    <?php endforeach; ?>
 
                 <?php endforeach; ?>
 
-            </div>
+            <?php endforeach; ?>
 
         <?php endforeach; ?>
 
@@ -52,14 +48,16 @@
 
 <?php endforeach; ?>
 
-<hr>
-
 <div class="pagination">
     <?php if ($page > 1): ?>
         <a href="?page=<?php echo $page - 1; ?>">Previous</a>
     <?php endif; ?>
 
-    <span>Page <?php echo h($page); ?></span>
+    <span>
+        Page <?php echo h($page); ?> of <?php echo h($totalPages); ?>
+    </span>
 
-    <a href="?page=<?php echo $page + 1; ?>">Next</a>
+    <?php if ($page < $totalPages): ?>
+        <a href="?page=<?php echo $page + 1; ?>">Next</a>
+    <?php endif; ?>
 </div>
