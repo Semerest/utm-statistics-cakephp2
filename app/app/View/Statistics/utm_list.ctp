@@ -54,14 +54,12 @@
 
 <hr>
 
-<div>
-    <a href="?page=<?php echo max(1, $page - 1); ?>">
-        Previous
-    </a>
+<div class="pagination">
+    <?php if ($page > 1): ?>
+        <a href="?page=<?php echo $page - 1; ?>">Previous</a>
+    <?php endif; ?>
 
-    |
+    <span>Page <?php echo h($page); ?></span>
 
-    <a href="?page=<?php echo $page + 1; ?>">
-        Next
-    </a>
+    <a href="?page=<?php echo $page + 1; ?>">Next</a>
 </div>

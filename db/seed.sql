@@ -1,8 +1,34 @@
 INSERT INTO utm_data
 (source, medium, campaign, content, term, created, modified)
 VALUES
+('facebook', 'social', 'retargeting', 'post', 'lead', NOW(), NOW()),
 ('google', 'cpc', 'summer', 'banner', 'video', NOW(), NOW()),
 ('google', 'cpc', 'winter', 'delta', NULL, NOW(), NOW()),
 ('google', 'organic', 'brand', NULL, NULL, NOW(), NOW()),
 ('yandex', 'cpc', 'spring', 'text', 'sale', NOW(), NOW()),
-('facebook', 'social', 'retargeting', 'post', 'lead', NOW(), NOW());
+
+('source_01', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_02', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_03', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_04', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_05', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_06', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_07', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_08', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_09', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_10', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_11', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_12', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_13', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_14', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_15', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_16', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_17', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_18', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_19', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_20', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_21', 'cpc', 'campaign_a', 'banner', 'term_a', NOW(), NOW()),
+('source_22', 'email', 'campaign_b', NULL, 'term_b', NOW(), NOW()),
+('source_23', 'social', 'campaign_c', 'post', NULL, NOW(), NOW()),
+('source_24', 'organic', 'campaign_d', NULL, NULL, NOW(), NOW()),
+('source_25', 'referral', 'campaign_e', 'link', 'partner', NOW(), NOW());

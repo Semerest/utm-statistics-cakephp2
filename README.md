@@ -21,6 +21,7 @@ Test task implementation for displaying UTM data as a hierarchical tree using Ca
 - Pagination by unique `source`
 - Seed data included
 - Docker-based local environment
+- Sample dataset includes more than 20 unique sources to verify pagination behavior
 
 ## Run
 
