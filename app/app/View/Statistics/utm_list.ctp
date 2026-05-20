@@ -1,5 +1,7 @@
 <h1>UTM Statistics</h1>
-
+<?php if (empty($tree)): ?>
+    <p>No UTM data found.</p>
+<?php endif; ?>
 <?php foreach ($tree as $source => $mediums): ?>
 
     <div style="margin-bottom: 20px;">
