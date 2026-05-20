@@ -27,3 +27,13 @@ Test task implementation for displaying UTM data as a hierarchical tree using Ca
 
 ```bash
 docker compose up -d --build
+
+Открыть страницу:
+
+```text
+http://localhost:8080/statistics/utm/list
+
+Вторая страница страницу:
+
+```text
+http://localhost:8080/statistics/utm/list
