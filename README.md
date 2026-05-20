@@ -1,8 +1,8 @@
 # UTM Statistics
 
-Test task implementation for displaying UTM data as a hierarchical tree using CakePHP 2.
+Мини-приложение на CakePHP 2 для отображения UTM-данных в виде дерева.
 
-## Stack
+## Стек
 
 - CakePHP 2.10.24
 - PHP 5.6 FPM
@@ -10,30 +10,64 @@ Test task implementation for displaying UTM data as a hierarchical tree using Ca
 - Nginx
 - Docker Compose
 
-## Features
+## Возможности
 
-- Displays UTM data as a nested tree:
+- Отображение UTM-данных в виде дерева:
   - source
   - medium
   - campaign
   - content
   - term
-- Pagination by unique `source`
-- Seed data included
-- Docker-based local environment
-- Sample dataset includes more than 20 unique sources to verify pagination behavior
+- Пагинация по уникальным `source`
+- На одной странице отображается не больше 20 `source`
+- Проект запускается через Docker
 
-## Run
+## Запуск
 
 ```bash
 docker compose up -d --build
+```
 
 Открыть страницу:
 
 ```text
 http://localhost:8080/statistics/utm/list
+```
 
-Вторая страница страницу:
+Проверить вторую страницу:
 
 ```text
-http://localhost:8080/statistics/utm/list
+http://localhost:8080/statistics/utm/list?page=2
+```
+
+## Структура проекта
+
+```text
+app/                 CakePHP 2 приложение
+db/init.sql          структура таблицы
+db/seed.sql          тестовые данные
+docker/              настройки контейнеров
+docker-compose.yml   запуск окружения
+```
+
+## База данных
+
+Таблица `utm_data` создаётся автоматически при первом запуске контейнера MySQL.
+
+Обязательные поля:
+
+- `source`
+- `medium`
+- `campaign`
+
+Поля, которые могут быть `NULL`:
+
+- `content`
+- `term`
+
+## Решения по реализации
+
+- Пагинация применяется к уникальным `source`, потому что в задании ограничено количество `source` на странице, а не количество строк.
+- Дерево собирается в коде приложения, потому что такая структура нужна только для отображения.
+- Для работы с базой используются методы модели CakePHP.
+- Docker используется, чтобы запускать проект без локальной установки PHP, MySQL и Nginx.
