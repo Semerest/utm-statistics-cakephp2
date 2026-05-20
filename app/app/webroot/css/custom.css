@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    margin: 30px;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+.utm-source {
+    margin-bottom: 22px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.utm-source-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.utm-level {
+    margin-top: 6px;
+}
+
+.utm-medium {
+    margin-left: 20px;
+}
+
+.utm-campaign {
+    margin-left: 40px;
+}
+
+.utm-content {
+    margin-left: 60px;
+}
+
+.utm-term {
+    margin-left: 80px;
+}
+
+.pagination {
+    margin-top: 25px;
+}
