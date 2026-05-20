@@ -1,0 +1,13 @@
+/vendor/
+/tmp/
+/logs/
+
+.DS_Store
+Thumbs.db
+
+.idea/
+.vscode/
+
+docker/mysql/
+
+*.log
