@@ -21,9 +21,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		<title>UTM Statistics</title>
-	</title>
+	<title>UTM Statistics</title>
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -52,3 +50,4 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
+
